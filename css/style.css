@@ -101,11 +101,11 @@ li {
   margin: 0 auto;
   width: 90%; }
 
-.live-events__title {
+.live-events__title, .artist__title {
   font-size: 3.12rem;
   font-weight: 900; }
 
-.live-events__info {
+.live-events__info, .artist__info {
   padding: 2.5rem 0 5.62rem;
   color: #a5acb0;
   font-size: 1.56rem;
@@ -173,7 +173,7 @@ li {
       background-color: #a5acb0; }
 
 .live-events {
-  padding: 9.18rem 0 7.81rem;
+  padding: 8.5rem 0 7.81rem;
   background-image: linear-gradient(to right, #101d39, #2d3c54);
   text-align: center; }
   .live-events__list {
@@ -205,7 +205,65 @@ li {
         right: 50%;
         bottom: 0;
         left: auto;
+        opacity: .7;
         cursor: pointer; }
       .live-events__list__item:hover {
         transform: scale(1.05);
         transition: transform ease-in-out .5s; }
+
+.artist {
+  padding: 145px 0 123px;
+  background-image: linear-gradient(to right, #0a1821, #283044); }
+  .artist__details {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; }
+    .artist__details__name-list {
+      flex-basis: 19.34%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch; }
+      .artist__details__name-list__item {
+        padding: 17px 6.62rem 19px 21px;
+        border-radius: 5px;
+        margin-bottom: 11px;
+        background-color: #2d3c54;
+        color: #a5acb0;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 400; }
+        .artist__details__name-list__item:hover, .artist__details__name-list__item--selected {
+          background-color: #aa15cc;
+          color: #fff; }
+    .artist__details__list {
+      flex-basis: 77.7%;
+      gap: 46px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch; }
+      .artist__details__list__item {
+        position: relative; }
+        .artist__details__list__item img {
+          border-radius: 5px; }
+        .artist__details__list__item::after {
+          content: "";
+          color: #a5acb0;
+          font-family: "FontAwesome";
+          font-size: 4.37rem;
+          font-weight: 400;
+          position: absolute;
+          top: 40%;
+          right: 40%;
+          bottom: 0;
+          left: auto;
+          opacity: .7;
+          cursor: pointer; }
+        .artist__details__list__item:hover {
+          transform: scale(1.05);
+          transition: transform ease-in-out .5s; }

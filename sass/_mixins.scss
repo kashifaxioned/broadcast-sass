@@ -40,3 +40,10 @@
   transform: scale($scale);
   transition: transform ease-in-out .5s;
 }
+
+@mixin play-cta-on-top ($top, $right, $bottom, $left) {
+  @include icon ("\f04b", 4.37rem, 400, $tertiary-color);
+  @include pos-absolute ($top, $right, $bottom, $left);
+  opacity: .7;
+  cursor: pointer;
+}

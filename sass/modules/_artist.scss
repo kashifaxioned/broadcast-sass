@@ -1,0 +1,50 @@
+.artist {
+  padding: 145px 0 123px;
+  background-image: linear-gradient(to right, $charcoal, $light-charcoal);
+
+  &__title { @extend %section-title; }
+
+  &__info { @extend %section-info; }
+
+  &__details {
+    @include flexBox (auto, space-between, auto, false);
+
+    &__name-list {
+      flex-basis: 19.34%;
+      @include flexBox (column, auto, auto, true);
+  
+      &__item {
+        padding: 17px 6.62rem 19px 21px;
+        border-radius: 5px;
+        margin-bottom: 11px;
+        background-color: $secondary-color;
+        color: $tertiary-color;
+        cursor: pointer;
+        @include font (20px, 400);
+
+        &:hover, &--selected { 
+          background-color: $pinkish-purple; 
+          color: #fff;
+        }
+      }
+    }
+
+    &__list {
+      flex-basis: 77.7%;
+      gap: 46px;
+      @include flexBox (auto, space-between, auto, true);
+
+      &__item {
+        position: relative;
+
+        & img { border-radius: 5px; }
+
+        &::after { @include play-cta-on-top (40%, 40%, 0, auto); }
+
+        &:hover { @include trans-grow(1.05) }
+      }
+    }
+  }
+
+ 
+}
