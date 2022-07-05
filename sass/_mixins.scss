@@ -6,9 +6,11 @@
   font-weight: $font-weight;
 } 
 
-@mixin flex ($flex-direction, $justify-content, $align-items) {
+@mixin flexBox ($flex-direction, $justify-content, $align-items, $wrap) {
   display: flex;
-  flex-wrap: wrap;
+
+  @if $wrap { flex-wrap: wrap; }
+  @else { flex-wrap: nowrap; }
   
   @if $flex-direction != auto { flex-direction: $flex-direction }
   @else { flex-direction: row }
@@ -18,4 +20,9 @@
 
   @if $align-items != auto { align-items: $align-items; }
   @else { align-items: stretch }
+}
+
+@mixin font ($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
 }

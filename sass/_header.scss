@@ -1,0 +1,32 @@
+.header {
+  padding: 20px 0;
+  background-color: #101d39;
+  color: #fff;
+
+  & .wrapper {
+    width: 97.2%;
+    @include flexBox (auto, space-between, center, false)
+  }
+
+  &__nav {
+
+    flex-basis: 30%;
+
+    &__list {
+      @include flexBox (auto, space-between, center, false);
+
+      &__item a {
+        text-transform: capitalize;
+        @include font (18px, 500);
+
+        &:hover {
+          transform: scale(1.2);
+          transition: transform .5s;
+        }
+      }
+    }
+
+    &__open, &__close { display: none; }
+
+  }
+}
