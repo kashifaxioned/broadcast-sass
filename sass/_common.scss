@@ -1,0 +1,22 @@
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a { 
+  display: inline-block;
+  color: inherit;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.container { position: relative; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 81.2%;
+}
