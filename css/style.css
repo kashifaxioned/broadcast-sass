@@ -126,7 +126,7 @@ li {
     justify-content: space-between;
     align-items: center; }
   .header__nav {
-    flex-basis: 30%; }
+    flex-basis: 20%; }
     .header__nav__list {
       display: flex;
       flex-wrap: nowrap;
@@ -307,3 +307,79 @@ li {
       .trending__list__item:hover {
         transform: scale(1.05);
         transition: transform ease-in-out .5s; }
+
+.footer {
+  padding: 135px 0 130px;
+  background-color: #000; }
+  .footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; }
+    .footer__list__item {
+      flex-basis: calc(33.33% - 2.5rem); }
+      .footer__list__item__title {
+        padding-bottom: 3.12rem;
+        text-transform: capitalize;
+        font-size: 2rem;
+        font-weight: 900; }
+      .footer__list__item__list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch; }
+        .footer__list__item__list__item__info {
+          padding: 20px 0;
+          border-bottom: 1px solid #2d3c54;
+          display: block;
+          color: #a5acb0;
+          font-size: 20px;
+          font-weight: 400; }
+  .footer__social__links {
+    padding: 6.75rem 0 1.12rem;
+    text-align: center; }
+    .footer__social__links__icons {
+      margin-right: 18px; }
+      .footer__social__links__icons a {
+        text-indent: -999999px; }
+        .footer__social__links__icons a::after {
+          text-indent: 0;
+          float: right; }
+        .footer__social__links__icons a:hover {
+          transform: scale(1.2);
+          transition: transform ease-in-out .5s; }
+        .footer__social__links__icons a.twitter::after {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 2rem;
+          font-weight: 400; }
+        .footer__social__links__icons a.facebook::after {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 2rem;
+          font-weight: 400; }
+        .footer__social__links__icons a.instagram::after {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 2rem;
+          font-weight: 400; }
+        .footer__social__links__icons a.snapchat::after {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 2rem;
+          font-weight: 400; }
+  .footer__copyright {
+    color: #a5acb0;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400; }
+    .footer__copyright--bold {
+      color: #fff;
+      text-transform: uppercase; }

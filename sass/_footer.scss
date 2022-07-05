@@ -1,0 +1,72 @@
+.footer {
+  padding: 135px 0 130px;
+  background-color: #000;
+
+  &__list {
+    @include flexBox (auto, space-between, auto, true);
+
+    &__item {
+      flex-basis: calc(33.33% - 2.5rem);
+
+      &__title {
+        padding-bottom: 3.12rem;
+        text-transform: capitalize;
+        @include font (2rem, 900);
+      }
+
+      &__list {
+        @include flexBox (column, space-between, auto, true);
+        
+        &__item {
+
+          &__info {
+            padding: 20px 0;
+            border-bottom: 1px solid $secondary-color;
+            display: block;
+            color: $tertiary-color;
+            @include font(20px, 400);
+          }
+        }
+      }
+    }
+  }
+
+  &__social__links {
+    padding: 6.75rem 0 1.12rem;
+    text-align: center;
+
+    &__icons {
+      margin-right: 18px;
+
+      & a {
+        text-indent: -999999px;
+        &::after {
+          text-indent: 0;
+          float: right;
+        }
+
+        &:hover { @include trans-grow (1.2) }
+        
+        &.twitter::after { @include social-icon ("\f099"); }
+
+        &.facebook::after { @include social-icon ("\f09a"); }
+
+        &.instagram::after { @include social-icon ("\f16d"); }
+
+        &.snapchat::after { @include social-icon ("\f2ab"); }
+      } 
+    }
+  }
+
+  &__copyright {
+    color: $tertiary-color;
+    text-align: center;
+    text-transform: capitalize;
+    @include font (20px, 400);
+
+    &--bold {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+}
