@@ -81,6 +81,7 @@ sub {
 
 body {
   box-sizing: border-box;
+  color: #fff;
   font-family: 'Fredoka', sans-serif; }
 
 a {
@@ -127,3 +128,35 @@ li {
           transition: transform .5s; }
     .header__nav__open, .header__nav__close {
       display: none; }
+
+.banner {
+  background: url("../../image/bg.jpg") no-repeat fixed center;
+  background-size: cover;
+  text-align: center; }
+  .banner .wrapper {
+    width: 53%;
+    padding: 17.87rem 0 16.06rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+  .banner__title {
+    margin-bottom: 1.87rem;
+    font-size: 5.12rem;
+    font-weight: 900; }
+  .banner__info {
+    line-height: 1.7;
+    color: #a5acb0;
+    font-size: 2rem;
+    font-weight: 500; }
+  .banner__cta {
+    padding: 20px 40px;
+    border: 1px solid #a5acb0;
+    border-radius: 5px;
+    margin: 2.18rem 0;
+    text-transform: capitalize;
+    font-size: 1.62rem;
+    font-weight: 700; }
+    .banner__cta:hover {
+      background-color: #a5acb0; }
