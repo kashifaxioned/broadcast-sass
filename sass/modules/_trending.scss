@@ -1,0 +1,30 @@
+.trending {
+  padding: 150px 0 130px;
+  background-image: linear-gradient(to right, $dark-charcoal, $charcoal);
+
+  &__title { @extend %section-title; }
+
+  &__info { @extend %section-info; }
+
+  &__list {
+    @include flexBox (auto, space-between, auto, true);
+
+    &__item {
+      border-radius: 5px;
+      flex-basis: calc(33.33% - 2.5rem);
+      position: relative;
+      background-color: $secondary-color;
+
+      & img { border-radius: 5px 5px 0 0; }
+
+      &__title {
+        padding: 2.5rem;
+        @include font (1.43rem, 700);
+      }
+
+      &::after { @include play-cta-on-top (30%, 45%, 0, auto); }
+
+      &:hover { @include trans-grow(1.05) }
+    }
+  }
+}

@@ -8,7 +8,7 @@
   &__info { @extend %section-info; }
 
   &__list {
-    @include flexBox (row, space-between, auto, true); 
+    @include flexBox (auto, space-between, auto, true); 
   
     &__item {
       border-radius: 10px;
@@ -16,7 +16,7 @@
       background-color: $secondary-color;
       color: $tertiary-color;
     
-      & img { border-radius: 10px; }
+      & img { border-radius: 10px 10px 0 0; }
 
       &__title {
         @include font (1.43rem, 700);
