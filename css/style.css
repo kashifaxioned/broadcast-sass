@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -100,6 +101,16 @@ li {
   margin: 0 auto;
   width: 90%; }
 
+.live-events__title {
+  font-size: 3.12rem;
+  font-weight: 900; }
+
+.live-events__info {
+  padding: 2.5rem 0 5.62rem;
+  color: #a5acb0;
+  font-size: 1.56rem;
+  font-weight: 400; }
+
 .header {
   padding: 20px 0;
   background-color: #101d39;
@@ -160,3 +171,41 @@ li {
     font-weight: 700; }
     .banner__cta:hover {
       background-color: #a5acb0; }
+
+.live-events {
+  padding: 9.18rem 0 7.81rem;
+  background-image: linear-gradient(to right, #101d39, #2d3c54);
+  text-align: center; }
+  .live-events__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; }
+    .live-events__list__item {
+      border-radius: 10px;
+      position: relative;
+      background-color: #2d3c54;
+      color: #a5acb0; }
+      .live-events__list__item img {
+        border-radius: 10px; }
+      .live-events__list__item__title {
+        font-size: 1.43rem;
+        font-weight: 700;
+        padding: 3.12rem 2.5rem;
+        text-align: left; }
+      .live-events__list__item::after {
+        content: "";
+        color: #a5acb0;
+        font-family: "FontAwesome";
+        font-size: 4.37rem;
+        font-weight: 400;
+        position: absolute;
+        top: 40%;
+        right: 50%;
+        bottom: 0;
+        left: auto;
+        cursor: pointer; }
+      .live-events__list__item:hover {
+        transform: scale(1.05);
+        transition: transform ease-in-out .5s; }

@@ -26,3 +26,17 @@
   font-size: $size;
   font-weight: $weight;
 }
+
+@mixin pos-absolute ($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+
+@mixin trans-grow ($scale) {
+  transform: scale($scale);
+  transition: transform ease-in-out .5s;
+}

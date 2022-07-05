@@ -21,3 +21,11 @@ li {
   margin: 0 auto;
   width: 90%; 
 }
+
+%section-title { @include font (3.12rem, 900) }
+
+%section-info {
+  padding: 2.5rem 0 5.62rem;
+  color: $tertiary-color;
+  @include font (1.56rem, 400)
+}
