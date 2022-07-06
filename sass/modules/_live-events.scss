@@ -3,29 +3,54 @@
   background-image: linear-gradient(to right, $primary-color, $secondary-color);
   text-align: center;
 
+  @include breakpoint (large-mobile) { padding: 5rem 0; }
+
   &__title { @extend %section-title; }
 
   &__info { @extend %section-info; }
 
   &__list {
     @include flexBox (auto, space-between, auto, true); 
+
+    @include breakpoint (ipad) { 
+      flex-direction: column; 
+      gap: 3rem;
+    }
+
   
     &__item {
-      border-radius: 10px;
+      flex-basis: calc(50% - 35px);
       position: relative;
-      background-color: $secondary-color;
       color: $tertiary-color;
+
+      &__link {
+        width: 100%;
+        &::after { 
+          @include play-cta-on-top (40%, 50%, 0, auto); 
+        
+          @include breakpoint (pc) { @include play-cta-on-top (30%, 0, 0, 0); }
+
+          @include breakpoint (ipad) { @include play-cta-on-top (40%, 0, 0, 0); }
+
+          @include breakpoint (large-mobile) { @include play-cta-on-top (30%, 0, 0, 0); }
+
+        }
+      }
     
       & img { border-radius: 10px 10px 0 0; }
 
       &__title {
         @include font (1.43rem, 700);
         padding: 3.12rem 2.5rem;
+        border-radius:  0 0 10px 10px;
+        background-color: $secondary-color;
         text-align: left;
+
+        @include breakpoint (ipad) { padding: 2rem 1rem; }
+
+        @include breakpoint (large-mobile) { @include font (1rem, 700); }
+
       }
-
-      &::after { @include play-cta-on-top (40%, 50%, 0, auto); }
-
       &:hover { @include trans-grow(1.05) }
     }
   }

@@ -2,6 +2,8 @@
   padding: 150px 0 130px;
   background-image: linear-gradient(to right, $dark-charcoal, $charcoal);
 
+  @include breakpoint (large-mobile) { padding: 5rem 0; }
+
   &__title { @extend %section-title; }
 
   &__info { @extend %section-info; }
@@ -9,20 +11,39 @@
   &__list {
     @include flexBox (auto, space-between, auto, true);
 
+    @include breakpoint (ipad-pro) {
+      gap: 30px;
+      @include flexBox (column, space-between, auto, false);
+    }
+
+
     &__item {
       border-radius: 5px;
       flex-basis: calc(33.33% - 2.5rem);
       position: relative;
       background-color: $secondary-color;
 
+      &__link {
+        width: 100%;
+
+        &::after { 
+          @include play-cta-on-top (35%, 0, 0, 45%); 
+        
+          @include breakpoint (pc) { @include play-cta-on-top (30%, 0, 0, 45%); }
+        }
+      }
+
       & img { border-radius: 5px 5px 0 0; }
 
       &__title {
         padding: 2.5rem;
         @include font (1.43rem, 700);
+
+        @include breakpoint (large-mobile) { 
+          @include font (1rem, 700);
+          padding: 1.5rem; }
       }
 
-      &::after { @include play-cta-on-top (30%, 45%, 0, auto); }
 
       &:hover { @include trans-grow(1.05) }
     }

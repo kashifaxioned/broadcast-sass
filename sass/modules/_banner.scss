@@ -7,17 +7,31 @@
     width: 53%;
     padding: 17.87rem 0 16.06rem;
     @include flexBox (column, auto, center, false);
+
+    @include breakpoint (pc) { width: 75%; }
+
+    @include breakpoint (ipad) { width: 90%; }
+
+    @include breakpoint (large-mobile) { padding: 8rem 0; }
+
+
   }
 
   &__title{
     margin-bottom: 1.87rem;
     @include font (5.12rem, 900);
+
+    @include breakpoint (ipad) { @include font (3rem, 900); }
+
   }
 
   &__info {
     line-height: 1.7;
     color: $tertiary-color;
-    @include font (2rem, 500)
+    @include font (2rem, 500);
+
+    @include breakpoint (ipad) { @include font (1.3rem, 500); }
+
   }
 
   &__cta {
@@ -27,6 +41,12 @@
     margin: 2.18rem 0;
     text-transform: capitalize;
     @include font (1.62rem, 700);
+
+    @include breakpoint (ipad) { 
+      padding: 10px 20px;
+      @include font (1.3rem, 700); 
+    }
+
 
     &:hover { background-color: $tertiary-color; }
   }
